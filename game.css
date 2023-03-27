@@ -1,0 +1,280 @@
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #050801;
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold white;
+            color: #03e9f4;
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            padding: 15px 15px;
+            margin: 20px 0;
+            color: #03e9f4;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 0.5s;
+            letter-spacing: 5px;
+            overflow: hidden;
+        }
+
+        a:hover {
+            background: #03e9f4;
+            color: #050801;
+            box-shadow: 0 0 5px #03e9f4,
+                0 0 20px #03e9f4,
+                0 0 40px #03e9f4,
+                0 0 70px #03e9f4;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+        }
+
+        a:nth-child(1) {
+            filter: hue-rotate(270deg);
+        }
+
+        a:nth-child(2) {
+            filter: hue-rotate(110deg);
+        }
+
+        a span {
+            position: absolute;
+            display: block;
+        }
+
+        a span:nth-child(1) {
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #03e9f4);
+            animation: animate1 1s linear infinite;
+        }
+
+        @keyframes animate1 {
+            0% {
+                left: -50%;
+            }
+
+            50%,
+            70% {
+                left: 50%;
+            }
+        }
+
+        a span:nth-child(2) {
+            top: -50%;
+            right: 0;
+            width: 2px;
+            height: 50%;
+            background: linear-gradient(180deg, transparent, #03e9f4);
+            animation: animate2 1s linear infinite;
+            animation-delay: 0.25s;
+        }
+
+        @keyframes animate2 {
+            0% {
+                top: -50%;
+            }
+
+            50%,
+            70% {
+                top: 50%;
+            }
+        }
+
+        a span:nth-child(3) {
+            bottom: 0;
+            right: 0;
+            width: 70%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #03e9f4);
+            animation: animate3 1s linear infinite;
+            animation-delay: 0.50s;
+        }
+
+        @keyframes animate3 {
+            0% {
+                right: -50%;
+            }
+
+            50%,
+            70% {
+                right: 50%;
+            }
+        }
+
+
+        a span:nth-child(4) {
+            bottom: -70%;
+            left: 0;
+            width: 2px;
+            height: 50%;
+            background: linear-gradient(360deg, transparent, #03e9f4);
+            animation: animate4 1s linear infinite;
+            animation-delay: 0.75s;
+        }
+
+        @keyframes animate4 {
+            0% {
+                bottom: -50%;
+            }
+
+            50%,
+            70% {
+                bottom: 50%;
+            }
+        }
+
+        /*#game {
+        background: red;
+        margin: 0 auto;
+        text-align: left;
+         margin: 0 auto;
+  border: 10px solid white;
+      }*/
+
+        h1 {
+            font-size: 36px;
+        }
+
+
+
+        #result {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        #attempts {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        #play-again {
+            display: none;
+        }
+
+        #game {
+            margin: 0 auto;
+            text-align: center;
+            font-size: 15px;
+            width: 450px;
+            height: 600px;
+        }
+
+        #container {
+            width: 350px;
+            height: 100px;
+            font-size: 25px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .GradientBorder {
+            position: relative;
+            width: 400px;
+            padding: 40px 0;
+            font-size: 5em;
+            color: #fff;
+            text-align: center;
+            letter-spacing: 5px;
+            background: #020117;
+        }
+
+        .GradientBorder::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+            z-index: -1;
+        }
+
+        .GradientBorder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+            z-index: -2;
+            filter: blur(40px);
+        }
+
+        #guess {
+            width: 350px;
+            height: 30px;
+            border: 2px solid #03e9f4;
+            border-radius: 5px;
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+            background: transparent;
+            color: #03e9f4;
+            transition: all 0.5s;
+        }
+
+        #guess:focus {
+            outline: none;
+            box-shadow: 0 0 5px #03e9f4,
+                0 0 20px #03e9f4,
+                0 0 40px #03e9f4,
+                0 0 70px #03e9f4;
+        }
+
+        input[type="number"] {
+            width: 300px;
+            height: 50px;
+            border: 2px solid #03e9f4;
+            border-radius: 2px;
+            font-size: 25px;
+            padding: 5px 10px;
+            text-align: center;
+            background: transparent;
+            color: #020117;
+            transition: background 0.3s ease-in-out;
+
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"]:focus {
+            background: #03e9f4;
+            color: #020117;
+            outline: none;
+        }
+
+        input[type="number"]::placeholder {
+            color: #03e9f4;
+            text-align: center;
+        }
+
+        ::placeholder {
+            color: #03e9f4;
+            text-align: center;
+        }
+
+        .made-by {
+            /* set the position of the "Made by NOVA" text */
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 10px;
+            font-size: 12px;
+            letter-spacing: 7px;
+            color: #666;
+        }
